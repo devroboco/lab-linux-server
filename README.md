@@ -16,5 +16,5 @@ Este projeto documenta a criação e administração de um servidor Linux em amb
 - Git e GitHub
 
 ## Estrutura do Projeto
-- `docs`: documentação das etapas
+- `docs/`: documentação das etapas
 - `images/`: imagens e prints do laboratório
