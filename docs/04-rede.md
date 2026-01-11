@@ -39,6 +39,10 @@ O comando ip a lista todas as interfaces de rede do sistema, exibindo seu estado
 A interface ens33 encontra-se operacional e corretamente configurada, possuindo endereço IPv4 privado obtido dinamicamente por meio do serviço DHCP.
 A presença do endereço IPv6 link-local é esperada e indica suporte ao protocolo IPv6 na rede local.
 
+### Evidência da interface de rede
+
+![Resultado do comando ip a](../images/ip-a.png)
+
 ## Análise da Tabela de Rotas e Gateway
 
 ### Comando utilizado
@@ -61,6 +65,10 @@ O comando ip route exibe a tabela de rotas do sistema, permitindo identificar co
 A rota padrão aponta para o endereço 192.168.64.2, correspondente ao gateway virtual fornecido pelo modo NAT do VMware.
 Essa configuração permite que o servidor acesse redes externas, incluindo a internet, por meio do ambiente de virtualização.
 
+### Evidência da tabela de rotas
+
+![Resultado do comando ip route](../images/ip-route.png))
+
 ## Verificação da Configuração de DNS
 
 ### Comando utilizado
@@ -80,6 +88,10 @@ O DNS é essencial para permitir o acesso a recursos externos por meio de nomes 
 ## Análise
 O servidor utiliza o DNS fornecido pelo gateway NAT do VMware, que realiza o encaminhamento das consultas DNS para servidores externos.
 A configuração de resolução de nomes encontra-se funcional.
+
+### Evidência da configuração de DNS
+
+![Resultado do resolvectl status](../images/resolvectl-status.png)
 
 ## Testes de Conectividade
 
@@ -119,6 +131,10 @@ ping -c 3 google.com
 ## Resultado
 Resposta positiva, com resolução do domínio para o endereço IP 142.251.132.238.
 
+### Evidência dos testes de conectividade
+
+![Ping](../images/ping.png)
+
 ## Análise
 Este teste confirma o funcionamento correto do serviço de DNS, validando a capacidade do servidor de resolver nomes de domínio e se comunicar com hosts externos.
 
@@ -131,3 +147,4 @@ Com base nas verificações realizadas, o servidor Linux virtualizado apresenta 
 - Comunicação local e externa validada por testes práticos.
 
 Dessa forma, o ambiente encontra-se preparado para a instalação e configuração de serviços de rede nas próximas etapas do projeto.
+
